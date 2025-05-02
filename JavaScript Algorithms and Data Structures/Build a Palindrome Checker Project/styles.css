@@ -1,0 +1,85 @@
+:root {
+    --primary-rgb: 70, 53, 177;
+    --secondary-rgb: 183, 113, 229;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0px;
+    background-image: linear-gradient(to bottom ,#FFFBCA, #AEEA94);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.7rem;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    flex-grow: 1;
+    border: 4px solid rgb(var(--secondary-rgb));
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0.6rem;
+}
+
+input:focus-visible {
+    border-color: rgb(var(--primary-rgb));
+    outline: none;
+}
+
+button {
+    background-color: rgb(var(--secondary-rgb), 0.4);
+    border: 4px solid rgb(var(--secondary-rgb));
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    padding: 0.6rem 1rem;
+}
+
+button:hover {
+    background-color: rgb(var(--primary-rgb), 0.4);
+    border-color: rgb(var(--primary-rgb));
+    color: white;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(var(--primary-rgb));
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: rgb(var(--secondary-rgb));
+    padding: 0.5rem 2rem;
+}
+
+footer p {
+    font-size: 18px;
+}
