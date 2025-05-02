@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>US Telephone Number Validator</title>
+</head>
+<body>
+    <main>
+        <h1>US Telephone Number Validator</h1>
+        <form action="#" method="get" onsubmit="return check()">
+            <div>
+                <label for="user-input">Enter a phone number:</label>
+                <input type="text" name="user-input" id="user-input">
+            </div>
+            <div class="buttons">
+                <button type="submit" id="check-btn">Check</button>
+                <span></span>
+                <button type="reset" id="clear-btn" onclick="clearList()">Clear</button>
+            </div>
+            <div id="results-div"></div>
+        </form>
+    </main>
+    <footer>
+        <p>💡 The USA country code is <b>+1</b>. You will add it to the beginning of any phone number you are dialing that's in the US.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
