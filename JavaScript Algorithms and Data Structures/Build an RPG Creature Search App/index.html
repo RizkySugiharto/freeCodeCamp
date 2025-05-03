@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>RPG Creature Search App</title>
+</head>
+<body>
+    <main>
+        <h1>RPG Creature Search App</h1>
+        <form action="#" method="get" onsubmit="return search()">
+            <div>
+                <label for="search-input">Search for creature name or ID:</label>
+                <div class="search-bar">
+                    <input type="search" name="search-input" id="search-input" required>
+                    <button type="submit" id="search-button">🔎</button>
+                </div>
+            </div>
+            <p id="loading-text"></p>
+        </form>
+        <div class="info-box hidden">
+            <p class="info-label"><span id="creature-name"></span> <span id="creature-id"></span></p>
+            <p class="info-value">Weight: <span id="weight"></span> | Height: <span id="height"></span></p>
+            <p class="info-types" id="types"></p>
+            <hr>
+            <p class="info-value">HP: <span id="hp"></span></p>
+            <p class="info-value">Attack: <span id="attack"></span></p>
+            <p class="info-value">Defense: <span id="defense"></span></p>
+            <p class="info-value">Special Attack: <span id="special-attack"></span></p>
+            <p class="info-value">Special Defense: <span id="special-defense"></span></p>
+            <p class="info-value">Speed: <span id="speed"></span></p>
+        </div>
+        <div class="info-box hidden">
+            <p class="info-label">Special Skill</p>
+            <hr>
+            <p class="info-value" id="special-skill-name"></p>
+            <p class="info-value"><span id="special-skill-description"></span></p>
+        </div>
+    </main>
+    <footer>
+        <p>💡 In this project, I am build an app that will <b>search for creatures</b> from an RPG game <b>by name or ID</b> and display the results to the user. To retrieve the creature data, I am use freeCodeCamp's <b>RPG Creature API</b>.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
