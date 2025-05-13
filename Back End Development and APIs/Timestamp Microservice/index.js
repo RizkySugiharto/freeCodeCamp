@@ -22,15 +22,15 @@ app.get("/", function (req, res) {
 // your first API endpoint... 
 app.get("/api/:date", function (req, res) {
   const regex = new RegExp(/^\d{4}-\d{2}-\d{2}$/);
-  let date, unix, utc;
+  let date, date_string, utc;
 
   if (regex.test(req.params.date)) {
-    unix = Date.parse(req.params.date);
+    date_string = Date.parse(req.params.date);
   } else {
-    unix = parseInt(req.params.date);
+    date_string = parseInt(req.params.date);
   }
 
-  date = new Date(unix);
+  date = new Date(date_string);
   utc = date.toUTCString();
 
   if (utc === 'Invalid Date') {
@@ -39,11 +39,23 @@ app.get("/api/:date", function (req, res) {
     });
   } else {
     res.json({
-      unix,
+      unix: date_string.toString(),
       utc 
     });
   }
+});
 
+app.get("/api", function (req, res) {
+  let date, date_string, utc;
+
+  date_string = Date.now();
+  date = new Date(date_string);
+  utc = date.toUTCString();
+
+  res.json({
+    unix: date_string.toString(),
+    utc 
+  });
 });
 
 
