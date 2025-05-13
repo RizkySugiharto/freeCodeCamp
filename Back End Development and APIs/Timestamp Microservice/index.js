@@ -39,7 +39,7 @@ app.get("/api/:date", function (req, res) {
     });
   } else {
     res.json({
-      unix: date_string.toString(),
+      unix: date_string,
       utc 
     });
   }
@@ -53,7 +53,7 @@ app.get("/api", function (req, res) {
   utc = date.toUTCString();
 
   res.json({
-    unix: date_string.toString(),
+    unix: date_string,
     utc 
   });
 });
